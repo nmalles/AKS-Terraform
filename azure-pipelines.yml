@@ -11,10 +11,10 @@ pool:
 
 steps:
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      #docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
-      docker run -d 071941676f19eff68ccab5d077ff97fae519870cc3b7e04610ba657cc0e2f562
+      - task: DockerCompose@0
+        inputs:
+          containerregistrytype: 'Container Registry'
+          dockerRegistryEndpoint: 'msh-docker-hub'
+          dockerComposeFile: '**/docker-compose.yml'
+          action: 'Run a Docker Compose command'
+          dockerComposeCommand: 'docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest'
