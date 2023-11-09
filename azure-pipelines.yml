@@ -28,4 +28,7 @@ steps:
     kubernetesCluster: 'myAKSCluster'
     command: 'login'
 - script: |
-    kubectl get namespaces
+    kubectl describe nodes 
+    kubectl get ns
+    kubectl get services
+    kubectl get pods
