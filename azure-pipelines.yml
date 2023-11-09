@@ -10,11 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: CmdLine@2
+- task: Bash@3
   inputs:
+    targetType: 'inline'
     script: |
-      echo Write your commands here
-      
-      echo Hello world
-      echo pwd
-      echo ls -lrt
+      # Write your commands here
+      pwd
+      ls -lrt
+      echo 'Hello world'
