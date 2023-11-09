@@ -11,8 +11,10 @@ pool:
 
 steps:
 
-- task: Docker@2
+- task: CmdLine@2
   inputs:
-    command: docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
-    #Dockerfile: '**/Dockerfile'
+    script: |
+      echo Write your commands here
+      
+      docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
     
