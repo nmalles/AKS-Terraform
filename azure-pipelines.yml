@@ -17,5 +17,5 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'msh-docker-hub'
-    command: 'login'
-    container: docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
+    #command: 'login'
+    command: docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
