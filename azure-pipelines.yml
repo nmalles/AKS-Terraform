@@ -26,9 +26,8 @@ steps:
     azureSubscriptionEndpoint: 'akv-terraform-service-connection-msh'
     azureResourceGroup: 'myResourceGroup'
     kubernetesCluster: 'myAKSCluster'
-    command: 'login'
+    #command: 'login'
 - script: |
-    kubectl describe nodes 
     kubectl get ns
     kubectl get services
     kubectl get pods
