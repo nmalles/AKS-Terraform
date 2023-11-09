@@ -17,4 +17,5 @@ steps:
       # Write your commands here
       pwd
       ls -lrt
+      hostname -I
       echo 'Hello world'
