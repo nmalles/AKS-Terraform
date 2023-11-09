@@ -21,3 +21,9 @@ steps:
       hostname
       echo 'Hello world'
 
+- task: AzureCLI@2
+  inputs:
+    scriptPath: |
+    az aks install-cli
+    az aks install-cliaz aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+    kubectl get ns
