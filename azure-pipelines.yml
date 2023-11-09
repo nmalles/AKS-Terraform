@@ -32,3 +32,4 @@ steps:
     #kubectl get services
     #kubectl get pods
     #kubectl get service store-front --watch
+    az aks stop --name myAKSCluster --resource-group myResourceGroup
