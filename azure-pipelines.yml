@@ -16,7 +16,7 @@ steps:
     script: |
       # Write your commands here
       pwd
-      ls -lrt
-      hostname -i
+      #ls -lrt
+      #hostname -i
       hostname
       echo 'Hello world'
