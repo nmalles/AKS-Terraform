@@ -10,11 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
-      - task: DockerCompose@0
-        inputs:
-          containerregistrytype: 'Container Registry'
-          dockerRegistryEndpoint: 'msh-docker-hub'
-          dockerComposeFile: '**/docker-compose.yml'
-          action: 'Run a Docker Compose command'
-          dockerComposeCommand: 'docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest'
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
+    command: docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest
