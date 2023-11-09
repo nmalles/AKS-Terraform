@@ -28,7 +28,7 @@ steps:
     kubernetesCluster: 'myAKSCluster'
     command: 'login'
 - script: |
-    #kubectl get ns
+    kubectl get ns
     #kubectl get services
     #kubectl get pods
-    kubectl get service store-front --watch
+    #kubectl get service store-front --watch
